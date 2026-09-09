@@ -1,0 +1,2 @@
+const CONFIG={mapsUrl:"https://maps.app.goo.gl/EFjQeXSEmZGaU59c8?g_st=ic",showPetals:true};document.querySelector(".map").href=CONFIG.mapsUrl;if(!CONFIG.showPetals)document.querySelector(".petals").hidden=true;
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("seen")}),{threshold:.15});document.querySelectorAll(".card,.details-card").forEach(x=>io.observe(x));
